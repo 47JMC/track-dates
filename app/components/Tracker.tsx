@@ -1,9 +1,13 @@
 "use client";
 
+type Props = {
+  rDate?: string;
+};
+
 import { useEffect, useState } from "react";
 import DisplayBox from "./DisplayBox";
 
-function Tracker() {
+function Tracker({ rDate }: Props) {
   // Implement tracking days left until GTA VI release
   // Nov 19, 2026
 
@@ -12,7 +16,7 @@ function Tracker() {
   const [minutesLeft, setMinutesLeft] = useState<number | null>(null);
 
   useEffect(() => {
-    const releaseDate = new Date("2026-11-19T00:00:00");
+    const releaseDate = new Date(rDate || "2026-11-19T00:00:00");
     setInterval(() => {
       const now = new Date();
       const timeDiff = releaseDate.getTime() - now.getTime();
