@@ -35,6 +35,7 @@ body {
 @theme inline {
   --font-nunito: var(--font-nunito);
   --font-fredoka: var(--font-fredoka);
+  --font-ubuntu-mono: var(--font-ubuntu-mono);
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
